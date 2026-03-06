@@ -124,7 +124,7 @@ All endpoints include server-side validation. Invalid requests return:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/quickhire-server.git
+git clone https://github.com/fahmida-oni2/quick-hire-server-repository.git
 cd quickhire-server
 ```
 
@@ -188,4 +188,5 @@ DB_PASSWORD = your_mongodb_password
 - `.env` is excluded from version control via `.gitignore`
 - MongoDB connection uses the `hire-db` database
 - Collections: `jobs`, `applications`
+
 
