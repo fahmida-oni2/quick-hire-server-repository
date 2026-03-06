@@ -188,3 +188,4 @@ DB_PASSWORD = your_mongodb_password
 - `.env` is excluded from version control via `.gitignore`
 - MongoDB connection uses the `hire-db` database
 - Collections: `jobs`, `applications`
+
