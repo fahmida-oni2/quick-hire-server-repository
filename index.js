@@ -39,6 +39,28 @@ async function run() {
     });
 
 
+    // GET featured jobs
+    app.get("/featured-jobs", async (req, res) => {
+      const result = await jobCollection
+        .find({
+          category: { $in: ["Design", "Marketing", "Technology"] },
+        })
+        .sort({ created_at: -1 })
+        .limit(8)
+        .toArray();
+      res.send(result);
+    });
+
+    // GET latest jobs
+    app.get("/latest-jobs", async (req, res) => {
+      const cursor = jobCollection.find().sort({ created_at: -1 }).limit(8);
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
+ 
+
+
     // await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!",
